@@ -12,12 +12,12 @@ export function Hero() {
   return (
     <section id="inicio" className="relative isolate overflow-hidden bg-primary">
       <Image
-        src="/images/hero-refinery.png"
-        alt=""
+        src="/images/equipe-gab.png"
+        alt="Equipe do Grupo Aragão Bonfim reunida no escritório"
         fill
         priority
         sizes="100vw"
-        className="-z-10 object-cover opacity-50"
+        className="-z-10 object-cover object-top opacity-60"
       />
       <div
         aria-hidden="true"

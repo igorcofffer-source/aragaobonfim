@@ -1,24 +1,24 @@
 const milestones = [
+  { year: '2008', text: 'Início das atividades da Impacto Soluções em Planejamento.' },
+  { year: '2010', text: 'Formalização do 1º contrato de planejamento e controle de obras.' },
   {
-    label: 'O início',
-    title: 'Nasce a Impacto',
-    text: 'A Impacto Soluções em Planejamento conquista espaço no planejamento de manutenção industrial e na análise de dados de SMS.',
+    year: '2012',
+    text: 'Comprovação da eficácia da metodologia de "Planejamento total para gestão de projetos de engenharia".',
+  },
+  { year: '2016', text: 'Assinatura do 1º contrato com a Petrobras.' },
+  {
+    year: '2018',
+    text: 'Consolidação e expansão das atividades, passando a atuar com análise estática e consultoria em engenharia.',
   },
   {
-    label: 'Expansão',
-    title: 'Novos segmentos',
-    text: 'O sucesso da Impacto em seus segmentos dá origem a novas frentes: engenharia multidisciplinar, confiabilidade e calibração.',
+    year: '2020',
+    text: 'Primeiros contratos de consultoria em lubrificação e metrologia, com a abertura do laboratório de calibração.',
   },
   {
-    label: '2020',
-    title: 'Legis e Propter',
-    text: 'Com a aquisição dos sistemas Legis e Propter, soma-se mais uma empresa ao grupo.',
+    year: '2021',
+    text: 'Primeiros contratos da Aragão Bonfim e início do Grupo AB, atuando com laudo NR-13 e realização de END.',
   },
-  {
-    label: 'Hoje',
-    title: 'Governança e crescimento',
-    text: 'Para implementar as melhores práticas de governança diante do crescimento das operações, nasce o Grupo Aragão Bonfim.',
-  },
+  { year: '2022', text: 'Início do processo de acreditação do laboratório de calibração.' },
 ]
 
 export function History() {
@@ -33,34 +33,24 @@ export function History() {
             Uma breve história do Grupo Aragão Bonfim
           </h2>
           <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
-            O grupo é o resultado do sucesso da Impacto em seus segmentos de atuação, uma trajetória
-            construída com técnica, confiança e resultados.
+            O grupo é o resultado do sucesso da Impacto em seus segmentos de atuação. Para implementar as
+            melhores práticas de governança diante do crescimento das operações, nasce o Grupo Aragão
+            Bonfim.
           </p>
         </div>
 
-        <div className="relative mt-16">
-        <div
-          aria-hidden="true"
-          className="absolute left-[11px] top-3 h-[calc(100%-1.5rem)] w-px bg-border md:left-0 md:top-[11px] md:h-px md:w-full"
-        />
-        <ol className="relative grid gap-10 md:grid-cols-4 md:gap-6">
+        <ol className="mt-16 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {milestones.map((m) => (
-            <li key={m.title} className="relative pl-10 md:pl-0 md:pt-12">
+            <li key={m.year} className="relative border-l-2 border-border pl-6 sm:border-l-0 sm:border-t-2 sm:pl-0 sm:pt-8">
               <span
                 aria-hidden="true"
-                className="absolute left-0 top-0.5 flex size-6 items-center justify-center rounded-full bg-accent ring-4 ring-background md:top-0"
-              >
-                <span className="size-2 rounded-full bg-accent-foreground" />
-              </span>
-              <p className="font-heading text-sm font-semibold uppercase tracking-wider text-accent">
-                {m.label}
-              </p>
-              <h3 className="mt-2 font-heading text-xl font-semibold text-primary">{m.title}</h3>
+                className="absolute -left-[9px] top-1 size-4 rounded-full bg-accent ring-4 ring-background sm:-top-[9px] sm:left-0"
+              />
+              <p className="font-heading text-3xl font-bold text-primary">{m.year}</p>
               <p className="mt-2 leading-relaxed text-muted-foreground">{m.text}</p>
             </li>
           ))}
         </ol>
-        </div>
       </div>
     </section>
   )

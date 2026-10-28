@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -35,12 +36,13 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 py-4">
         <a href="#inicio" className="flex items-center gap-3 text-primary-foreground">
-          <span
-            aria-hidden="true"
-            className="flex size-10 items-center justify-center rounded-md bg-accent font-heading text-lg font-bold text-accent-foreground"
-          >
-            AB
-          </span>
+          <Image
+            src="/images/logo-m.jpg"
+            alt=""
+            width={44}
+            height={44}
+            className="size-11 rounded-full bg-white object-cover ring-2 ring-white/30"
+          />
           <span className="flex flex-col leading-tight">
             <span className="font-heading text-base font-semibold tracking-wide">
               Grupo Aragão Bonfim
